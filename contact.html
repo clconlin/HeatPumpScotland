@@ -46,13 +46,15 @@
                 <p>Fill out the form below and we'll get back to you within 24 hours.</p>
 
                 <!--
-                    FORMSPREE SETUP:
-                    1. Go to https://formspree.io and create a free account
-                    2. Create a new form
-                    3. Replace YOUR_FORMSPREE_ID below with your form ID
-                    4. Submissions will be emailed directly
+                    FORMSUBMIT.CO - Free, no signup required.
+                    The first form submission will trigger a confirmation email to scott@conlinconstruction.co.uk.
+                    Click the link in that email to activate the form.
                 -->
-                <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form" id="contactForm">
+                <form action="https://formsubmit.co/scott@conlinconstruction.co.uk" method="POST" class="contact-form" id="contactForm">
+                    <!-- FormSubmit config: disable captcha, set thank-you redirect -->
+                    <input type="hidden" name="_subject" value="New enquiry from Heat Pump Scotland website">
+                    <input type="hidden" name="_next" value="https://clconlin.github.io/HeatPumpScotland/contact.html?submitted=true">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" required placeholder="Your full name">
@@ -157,5 +159,17 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Show thank-you message after form submission redirect
+        if (window.location.search.includes('submitted=true')) {
+            var form = document.getElementById('contactForm');
+            if (form) {
+                var msg = document.createElement('div');
+                msg.style.cssText = 'background:#e8f5ee;border:1px solid #0e7c4a;border-radius:8px;padding:24px;text-align:center;margin-bottom:24px;';
+                msg.innerHTML = '<h3 style="color:#0e7c4a;margin-bottom:8px;">✓ Enquiry Sent!</h3><p style="color:#333;">Thank you — we\'ll get back to you within 24 hours.</p>';
+                form.parentNode.insertBefore(msg, form);
+            }
+        }
+    </script>
 </body>
 </html>
