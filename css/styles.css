@@ -501,6 +501,13 @@ ul {
     min-width: 0;
 }
 
+.instagram-embed-item iframe {
+    width: 100%;
+    min-height: 500px;
+    border: none;
+    border-radius: var(--radius);
+}
+
 .instagram-embed-item .instagram-media {
     margin: 0 !important;
     width: 100% !important;
