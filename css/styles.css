@@ -490,6 +490,23 @@ ul {
 }
 
 /* ===== GALLERY / INSTAGRAM ===== */
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.instagram-embed-item {
+    min-width: 0;
+}
+
+.instagram-embed-item .instagram-media {
+    margin: 0 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
 .instagram-feed-placeholder {
     background: var(--bg-alt);
     border: 2px dashed var(--border);
