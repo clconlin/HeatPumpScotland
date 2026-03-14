@@ -41,47 +41,33 @@
     <section class="section">
         <div class="container">
             <h2 class="section-title">📷 Latest from Instagram</h2>
-            <p class="section-subtitle">Follow us <a href="https://www.instagram.com/scotlandnationalteam/" target="_blank" rel="noopener">@scotlandnationalteam</a> to see our work in real time</p>
+            <p class="section-subtitle">Follow us <a href="https://www.instagram.com/scotlandnationalteam/" target="_blank" rel="noopener">@ScotlandNationalTeam</a> to see our work in real time</p>
 
             <!--
-                INSTAGRAM EMBED OPTIONS:
-                
-                Option 1: Use Elfsight Instagram Feed widget (free plan available)
-                - Sign up at https://elfsight.com/instagram-feed-widget/
-                - Create a widget and paste the script below
-                
-                Option 2: Use Behold.so (free plan available)
-                - Sign up at https://behold.so
-                - Connect Instagram account and get embed code
-                
-                Option 3: Use Curator.io (free plan available)
-                - Sign up at https://curator.io
-                - Connect Instagram and get embed code
-                
-                Replace the placeholder below with your chosen embed code.
+                INSTAGRAM EMBED:
+                Using Elfsight Instagram Feed widget (free plan available).
+                To set up:
+                1. Go to https://elfsight.com/instagram-feed-widget/
+                2. Create a free account
+                3. Create a widget and connect @scotlandnationalteam
+                4. Replace the data-app-id below with your widget ID
             -->
 
-            <div class="instagram-feed-placeholder">
-                <div class="instagram-placeholder-content">
-                    <p class="instagram-placeholder-icon">📷</p>
-                    <h3>Instagram Feed Coming Soon</h3>
-                    <p>Once your Instagram account is set up, we'll embed the live feed here.</p>
-                    <p>Posts will update automatically — no website changes needed!</p>
-                    <a href="https://www.instagram.com/scotlandnationalteam/" target="_blank" rel="noopener" class="btn btn-primary">Follow Us on Instagram</a>
+            <!-- Elfsight Instagram Feed Widget -->
+            <script src="https://static.elfsight.com/platform/platform.js" async></script>
+            <div class="elfsight-app-REPLACE-WITH-YOUR-WIDGET-ID" data-elfsight-app-lazy></div>
+
+            <!-- Fallback: shown if widget hasn't been configured yet -->
+            <noscript>
+                <div class="instagram-feed-placeholder">
+                    <div class="instagram-placeholder-content">
+                        <p class="instagram-placeholder-icon">📷</p>
+                        <h3>Visit Our Instagram</h3>
+                        <p>See our latest heat pump installations and project updates.</p>
+                        <a href="https://www.instagram.com/scotlandnationalteam/" target="_blank" rel="noopener" class="btn btn-primary">View @ScotlandNationalTeam on Instagram</a>
+                    </div>
                 </div>
-            </div>
-
-            <!-- 
-                When ready, replace the placeholder above with something like:
-                
-                Elfsight example:
-                <script src="https://static.elfsight.com/platform/platform.js" async></script>
-                <div class="elfsight-app-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"></div>
-                
-                Behold example:
-                <behold-widget feed-id="YOUR_FEED_ID"></behold-widget>
-                <script src="https://w.behold.so/widget.js" type="module"></script>
-            -->
+            </noscript>
         </div>
     </section>
 
